@@ -8,6 +8,7 @@
 .moveButtons{
     display: none; 
     width: 100%;
+    margin: 50px;
 }
 #button1{
     float: left;

@@ -7,7 +7,7 @@ var score = 0;
 var scores = document.querySelector('ul')
 var COLORS = ['red'];
 
-if (window.innerWidth<500){
+if (window.innerWidth<700){
     canvas.width = window.innerWidth;
 }
 
@@ -21,13 +21,13 @@ window.addEventListener('mousemove',
     }
     )
 
-window.addEventListener('resize', 
-    function(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight/2;
-    init(); 
-    }
-    )
+// window.addEventListener('resize', 
+//     function(){
+//     canvas.width = window.innerWidth;
+//     canvas.height = window.innerHeight/2;
+//     init(); 
+//     }
+//     )
 
 
     
@@ -134,16 +134,25 @@ window.addEventListener('keydown', function(event){
     // 39 right
     // 40 bottom
     if (event.keyCode === 39){
-        if (paddleX+width < canvas.width){
-            paddleX+=20
-        }
+        moveLeft();
     }
     else if (event.keyCode === 37){
-        if (paddleX > 0){
-            paddleX -=20
-        }
+        moveRight();
     }
 })
+
+function moveLeft(){
+    if (paddleX+width < canvas.width){
+        paddleX+=20
+    }
+}
+
+function moveRight(){
+    if (paddleX > 0){
+        paddleX -=20
+    }
+}
+
 function giveresult(circle,X){
 
     if ((circle.y + circle.radius) >= (canvas.height) &&  ((circle.x - circle.radius) <= (X + 100) && (circle.x - circle.radius) > (X))){
