@@ -28,12 +28,12 @@ canvas{
 li{
     font-size: 30px;
 }
-.container{
+.container-1{
     display: flex;
 }
 
 @media only screen and (max-width: 500px) {
-    .container{
+    .container-1{
         display: inline-block;
     }
     .moveButtons{
