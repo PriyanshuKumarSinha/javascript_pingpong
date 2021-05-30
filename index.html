@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breakout Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
 </head>
 <body>
     <div class="container">
         <canvas id = "canvas">Oops! Canvas is not supported</canvas>
         <div class="scoreContainer">
             <div class="moveButtons">
-                <button id = "button1" onclick = "moveLeft()">A</button>
-                <button id = "button2" onclick = "moveRight()">B</button>
+                <button id = "button1" onclick = "moveRight()" class = 'btn btn-primary btn-lg'>A</button>
+                <button id = "button2" onclick = "moveLeft()"   class = 'btn btn-primary btn-lg'>B</button>
 
             </div>
             <div class="score"><b>0</b></div>

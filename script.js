@@ -13,13 +13,13 @@ if (window.innerWidth<700){
 
 var maxRadius = 30;
 var seperationDistance = 40;
-window.addEventListener('mousemove',
-    function(event){
-        paddleX = event.x;
-        // mouse.y = event.y - innerHeight;
+// window.addEventListener('mousemove',
+//     function(event){
+//         paddleX = event.x;
+//         // mouse.y = event.y - innerHeight;
         
-    }
-    )
+//     }
+//     )
 
 // window.addEventListener('resize', 
 //     function(){
@@ -142,13 +142,17 @@ window.addEventListener('keydown', function(event){
 })
 
 function moveLeft(){
+
     if (paddleX+width < canvas.width){
+
         paddleX+=20
     }
 }
 
 function moveRight(){
     if (paddleX > 0){
+        console.log('yes')
+
         paddleX -=20
     }
 }
