@@ -5,6 +5,16 @@
     color : white
 
 }
+.moveButtons{
+    display: none; 
+    width: 100%;
+}
+#button1{
+    float: left;
+}
+#button2{
+    float: right;
+}
 canvas{
     border: solid 1px white;
 }
@@ -21,6 +31,9 @@ li{
 
 @media only screen and (max-width: 500px) {
     .container{
+        display: inline-block;
+    }
+    .moveButtons{
         display: inline-block;
     }
 }

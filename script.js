@@ -7,7 +7,9 @@ var score = 0;
 var scores = document.querySelector('ul')
 var COLORS = ['red'];
 
-
+if (window.innerWidth<500){
+    canvas.width = window.innerWidth;
+}
 
 var maxRadius = 30;
 var seperationDistance = 40;
