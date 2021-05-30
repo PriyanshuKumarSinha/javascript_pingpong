@@ -93,7 +93,7 @@ function animate(){
     c.clearRect(0,0,innerWidth, innerHeight) // clears the canvas from (0,0) to (innerWidth, innerHeight) i.e complete canvas
     drawPaddle(paddleX,canvas.height -15);
     if(circleArray[0].x + width < canvas.width){
-    drawPaddle(circleArray[0].x -  Math.random() * 10, 0);
+    drawPaddle(circleArray[0].x -  50, 0);
     }
     else{
     drawPaddle(canvas.width - width, 0);
