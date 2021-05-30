@@ -1,8 +1,8 @@
 *{
     padding: 0;
     margin: 0;
-    background-color: black;
-    color : white
+    /* background-color: black; */
+    color : black
 
 }
 .moveButtons{
@@ -16,7 +16,7 @@
     float: right;
 }
 canvas{
-    border: solid 1px white;
+    border: solid 1px black;
 }
 .score,.database{
     padding: 50px;

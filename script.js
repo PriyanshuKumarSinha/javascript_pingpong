@@ -6,7 +6,10 @@ var scoreDiv = document.querySelector('.score')
 var score = 0;
 var scores = document.querySelector('ul')
 var COLORS = ['red'];
-
+var size = [window.width,window.height]; 
+function resized(){
+    window.resizeTo(size[0],size[1]);
+}
 if (window.innerWidth<700){
     canvas.width = window.innerWidth;
 }
@@ -21,13 +24,7 @@ var seperationDistance = 40;
 //     }
 //     )
 
-// window.addEventListener('resize', 
-//     function(){
-//     canvas.width = window.innerWidth;
-//     canvas.height = window.innerHeight/2;
-//     init(); 
-//     }
-//     )
+window.addEventListener('resize', resized())
 
 
     
@@ -156,6 +153,23 @@ function moveRight(){
         paddleX -=20
     }
 }
+
+function moveMobileLeft(){
+
+    if (paddleX+width < canvas.width){
+
+        paddleX+=50
+    }
+}
+
+function moveMobileRight(){
+    if (paddleX > 0){
+        console.log('yes')
+
+        paddleX -=45
+    }
+}
+
 
 function giveresult(circle,X){
 
